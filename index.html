@@ -28,16 +28,36 @@
       <nav class="navbar-nav">
         <a href="#about">School Information</a>
         <a href="#publikasi">Publikasi</a>
-        <a href="#info">Parent & Student</a>
+        <a href="#prestasi">Prestasi</a>
         <!-- <a href="#publikasi">Publication</a> -->
-        <a href="#sosial">Contact Us</a>
+        <a href="#info">Contact Us</a>
       </nav>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="user"><i data-feather="user"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="user-button"><i data-feather="user"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <!-- mulai UI untuk searching -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here ..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- akhir UI untuk searching -->
+
+      <!-- Awal kotak register -->
+      <div class="register-card">
+        <div class="register-user">
+          <img src="img/prestasi/1.png" alt="register" />
+          <div class="user-item">
+            <h3>User</h3>
+            <div class="item-price">Prestasi</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Akhir kotak register -->
     </nav>
     <!-- akhir dari navigasi atas pada website -->
 
@@ -117,6 +137,61 @@
     </section>
     <!-- Akhir Publikasi berita & artikel -->
 
+    <!-- Awal bagian Prestasi -->
+    <section class="prestasi" id="prestasi">
+      <h2>Prestasi <span>SMK Panca Marga</span></h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+        autem blanditiis dignissimos fuga quam optio!
+      </p>
+
+      <div class="row">
+        <div class="prestasi-card">
+          <div class="prestasi-icons">
+            <a href="#"><i data-feather="award"></i></a>
+            <a href="#" class="deskripsi-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="prestasi-image">
+            <img src="img/prestasi/1.png" alt="Prestasi Akademik" />
+          </div>
+          <div class="prestasi-content">
+            <h3>Prestasi Akademik</h3>
+            <div class="prestasi-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="prestasi-lomba">
+              Kompetisi <span>Sains Nasional</span>
+            </div>
+          </div>
+        </div>
+        <div class="prestasi-card">
+          <div class="prestasi-icons">
+            <a href="#"><i data-feather="award"></i></a>
+            <a href="#" class="deskripsi-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="prestasi-image">
+            <img src="img/prestasi/1.png" alt="Prestasi Akademik" />
+          </div>
+          <div class="prestasi-content">
+            <h3>Prestasi Non-Akademik</h3>
+            <div class="prestasi-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="prestasi-lomba">Seni &<span> Olahraga</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir bagian Prestasi -->
+
     <!-- Mulai Section info lebih lanjut -->
     <section id="info" class="info">
       <h2><span>Info</span> Lebih Lanjut</h2>
@@ -174,6 +249,37 @@
       </div>
     </footer>
     <!-- Akhir Catatan kaki -->
+
+    <!-- Awal modal box deskripsi prestasi -->
+    <div class="modal" id="deskripsi-prestasi">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/prestasi/1.png" alt="Prestasi" />
+          <div class="prestasi-content">
+            <h3>Prestasi Akademik</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ab eius placeat laborum, quos in!
+            </p>
+            <div class="prestasi-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="prestasi-lomba">
+              Kompetisi <span>Sains Nasional</span>
+            </div>
+            <a href="#"
+              ><i data-feather="user"></i><span>Daftar Sekarang</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir modal box deskripsi prestasi -->
 
     <!-- Kode memanggil ikon ilustrasi -->
     <script>

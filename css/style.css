@@ -1,6 +1,7 @@
 :root {
   --primary: #ffa703;
   --background: #44749d;
+  --black: #010101;
 }
 
 * {
@@ -40,8 +41,8 @@ body {
 }
 
 .navbar .navbar-logo {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 700;
   color: #fff;
   font-style: italic;
 }
@@ -85,6 +86,92 @@ body {
 
 #hamburger-menu {
   display: none;
+}
+
+/* gaya navigasi untuk searching */
+.navbar .search-form {
+  position: absolute;
+  top: 105%;
+  right: 7%;
+  background-color: #fff;
+  width: 30rem;
+  height: 3rem;
+  display: flex;
+  border: none;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--black);
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+}
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--primary);
+}
+
+/* nacigasi untuk form register */
+.register-card {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 20rem;
+  padding: 0 1.5rem;
+  color: var(--primary);
+  background-color: #fff;
+  transition: 0.3s linear;
+}
+.register-card.active {
+  right: 0;
+}
+.register-card .register-user {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed var(--black);
+  position: relative;
+}
+.register-card img {
+  height: 6rem;
+  border-radius: 0;
+}
+.register-card h3 {
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+.register-card .remove-item {
+  position: absolute;
+  right: 1rem;
+}
+.register-card .item-price {
+  font-size: 1.2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.register-card .item-price:hover {
+  color: var(--background);
+}
+.register-card .remove-item:hover {
+  color: var(--background);
 }
 
 /* Hero section */
@@ -152,21 +239,24 @@ body {
 /* Bagian Halaman About */
 .about,
 .publikasi,
-.info {
+.info,
+.prestasi {
   padding: 6rem 7% 0.5rem;
 }
 
 .about h2,
 .publikasi h2,
-.info h2 {
+.info h2,
+.prestasi h2 {
   text-align: center;
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 3rem;
 }
 
 .about h2 span,
 .publikasi h2 span,
-.info h2 span {
+.info h2 span,
+.prestasi h2 span {
   color: var(--primary);
 }
 
@@ -201,19 +291,19 @@ body {
 
 /* Style bagian publikasi */
 .publikasi h2,
-.info h2 {
-  margin-bottom: 1px;
+.info h2,
+.prestasi h2 {
+  margin-bottom: 0;
   color: #fff;
 }
 .publikasi p,
-.info p {
-  padding: 2rem;
+.info p,
+.prestasi p {
+  padding: 0.5rem;
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-size: 1rem;
-  /* font-weight: 100;
-  line-height: 1.6rem; */
+  font-size: 15px;
 }
 .publikasi .row {
   display: flex;
@@ -245,6 +335,69 @@ body {
 h3 {
   margin-top: 1rem auto 0.5rem;
   color: #fff;
+}
+
+/* Style untuk bagian prestasi */
+.prestasi .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.prestasi .prestasi-card {
+  text-align: center;
+  border: 1px solid var(--black);
+  padding: 2rem;
+}
+.prestasi .prestasi-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.prestasi .prestasi-card a {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.prestasi .prestasi-card a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.prestasi .prestasi-image {
+  padding: 0.5rem 0;
+}
+.prestasi .prestasi-image img {
+  height: 20rem;
+}
+.prestasi .prestasi-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.prestasi .prestasi-stars {
+  font-size: 1.7rem;
+  top: 0;
+  padding: 0;
+  color: var(--primary);
+}
+.prestasi .prestasi-stars .star-full {
+  fill: var(--primary);
+}
+.prestasi .prestasi-lomba {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.prestasi .prestasi-lomba span {
+  color: var(--primary);
+  font-weight: bold;
 }
 
 /* style untuk info lebih lanjut */
@@ -332,6 +485,70 @@ footer .credit a {
   font-weight: 700;
 }
 
+/* Gaya untuk modal box dan deskripsi bagian prestasi */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--primary);
+  margin: 13.7% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* animasi untuk modal box */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.modal-content img {
+  height: 15rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 0.2rem;
+}
+.modal-content h3 {
+  margin-top: 1rem;
+  color: var(--primary);
+}
+.modal-content a {
+  display: flex;
+  gap: 0.5rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 9px 12px;
+}
+
 /* web dimuat dalam media apa?? */
 /* Media Laptop */
 /* @media (max-width: 1366px) {
@@ -410,6 +627,10 @@ footer .credit a {
   }
   .info .row form {
     padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
   }
 }
 
